@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Attack of Monster';
+  src: url('../Brinth_Fonts/Attack Of Monster.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CopperplateCC-Bold';
+  src: url('../brinth_fonts/CopperplateCC-Bold.ttf') format('truetype');
+}
+/* na mh kanei scroll*/
+html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: url("../../brinth_icons/bg2.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ==== CORNER IMAGE FRAMES ==== */
+.corner {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 15px #5e4431);
+}
+
+.corner-tl { top: 0; left: 0; }
+.corner-tr { top: 0; right: 0; transform: scaleX(-1); }
+.corner-bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.corner-br { bottom: 0; right: 0; transform: scale(-1, -1); }
+
+
+.start-button {
+      display: inline-block;
+      font-family: 'Attack of Monster', serif;
+      padding: 40px 80px;
+      font-size: 2.2em;
+      color: #795845;
+      background: transparent;
+      border: 5px solid #795845;
+      text-decoration: none;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      box-shadow: 0 0 20px rgba(42, 20, 167, 0.4);
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 2px #3e2d20, 0 0 8px #a88a60;
+      margin-left: 43%;
+}
+
+.start-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.ornament-top,
+.ornament-bottom {
+  width: 400px;
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 2%;
+  margin-bottom:2%;
+}
+
+.ornament-top path,
+.ornament-bottom path {
+  stroke: #795845;
+  stroke-width: 2;
+  fill: none;
+  filter: drop-shadow(0 0 6px #a88a60);
+
+}
+.card-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-top: 8vh;
+  flex-wrap: nowrap;
+  height: 70vh;
+  overflow: hidden;
+}
+
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  position: relative;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
+}
+
+/* Magical glow aura */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 400px;
+  background: radial-gradient(circle, #795845 0%, rgba(0,0,0,0) 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  filter: blur(25px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.category-title {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3em;
+  color: #795845;
+  text-shadow: 1px 1px 4px #000, 0 0 8px #795845;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-window {
+  background: rgba(10, 10, 10, 0.85);
+  border: 2px solid #795845;
+  border-radius: 20px;
+  width: 65%;
+  height: 65%;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 30px #795845aa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  overflow-y: auto;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+}
+
+.modal-card {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 8px #a88a60);
+}
+
+.modal-card:hover {
+  transform: scale(1.1);
+}
+
+.close-button {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1em;
+  padding: 10px 25px;
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid #795845;
+  color: #795845;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 10px;
+  text-shadow: 0 0 6px #a88a60;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px #a88a60;
+}
+
+/* Hover effect */
+.card:hover img {
+  transform: scale(1.12);
+}
+
+/* Hover grow effect */
+.card:hover img {
+  transform: scale(1.1);
+}
+/* Switch to 2x2 layout on medium/smaller screens */
+@media (max-width: 1200px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 1px 70px;
+    padding: 30px;
+    height: auto;
+  }
+
+}
+.modal-card.disabled {
+  pointer-events: none;
+  filter: grayscale(1) brightness(0.6) blur(1px);
+  transform: none !important;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+
+  .page-container {
+    height: auto !important;
+    padding: 20px 0 !important;
+  }
+
+  .corner {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .category-title {
+    font-size: 1.6em !important;
+    top: 20px !important;
+  }
+
+  .card-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 20px !important;
+    padding: 100px 20px 30px !important;
+    height: auto !important;
+  }
+
+  .card img {
+    width: 100px !important;
+  }
+
+  .card::before {
+    width: 160px !important;
+    height: 220px !important;
+    filter: blur(15px) !important;
+  }
+
+  .modal-window {
+    width: 90% !important;
+    height: 80% !important;
+    padding: 15px !important;
+  }
+
+  .modal-card {
+    width: 65px !important;
+  }
+
+  .close-button {
+    font-size: 0.9em !important;
+    padding: 8px 16px !important;
+  }
+
+  .center-message {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 30px !important;
+  }
+
+  .start-button {
+    padding: 25px 50px;
+    font-size: 2em;
+    color: #795845;
+    border: 3px solid #795845;
+    margin-top: 10%;
+    margin-right: 40%;
+  }
+}

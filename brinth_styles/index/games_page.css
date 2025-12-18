@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(ellipse at center, #102324, #000);
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.page-container {
+  padding: 80px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3.5em;
+  font-family: 'Cinzel Decorative';
+  color: #9e8170;
+  text-shadow: 1px 1px 2px #16100b, 0 0 10px #241604;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.game-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  width: 1100px;
+  margin: 60px 0;
+}
+
+.game-text {
+  flex: 1;
+  font-size: 1.05em;
+  font-weight: 300;
+  font-family: 'Georgia', serif;
+  color: #e3d8c6;
+  text-shadow: 0 0 6px #3d2a1f;
+  line-height: 1.8;
+}
+
+.game-text h2 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #f2e4c6;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.game-image {
+  flex: 1;
+  max-width: 480px;
+}
+
+.game-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .game-row {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .game-text, .game-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .game-text h2 {
+    font-size: 1.3em;
+  }
+}
+
+.brinth-divider {
+  margin: 60px auto;
+  width: 80%;
+  border: none;
+  border-top: 2px solid #795845;
+  opacity: 0.3;
+}
+
+.footMenuWrap {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding-bottom: 50px;
+    text-align: left;
+}
+.footMenuWrap li h5 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #eee;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+
+.footMenuWrap li a {
+    color: #818181;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+    font-size: 13px;
+
+
+}
+
+.footMenuWrap li a:hover {
+    color: #fff;
+}
+#slogan {
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 40px;
+  font-size: 1.3em;
+  border: 2px solid #795845;
+  border-radius: 25px;
+  color: #795845;
+  background: transparent;
+  text-decoration: none;
+  text-shadow: 0 0 5px #795845;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 20px #795845;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin-top: 50px;
+  }
+
+  .game-row {
+    flex-direction: column !important;
+    width: 90%;
+    gap: 20px;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .game-image {
+    order: 1;
+    width: 100%;
+  }
+
+  .game-text {
+    order: 2;
+    width: 100%;
+  }
+
+  .game-text h2 {
+    font-size: 1.2em;
+  }
+
+  .cta-button {
+    margin-top: 20px;
+  }
+}

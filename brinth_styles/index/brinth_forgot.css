@@ -1,0 +1,57 @@
+/* Forgot Password Modal Background */
+.forgot-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Forgot Password Modal Box */
+.forgot-box {
+  background: #121212;
+  padding: 25px 30px;
+  border-radius: 20px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0 0 20px #5d3e2d;
+}
+
+.forgot-box h3 {
+  font-family: 'Georgia', serif;
+  color: #d6b089;
+  margin-bottom: 15px;
+}
+
+.forgot-box input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #5a4335;
+  background: #2b1d17;
+  color: #f0e5d8;
+  font-family: 'Georgia', serif;
+}
+
+.forgot-box button {
+  margin: 5px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #5d3e2d, #8a6a4f);
+  color: #fefefe;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  transition: background 0.3s ease;
+}
+
+.forgot-box button:hover {
+  background: linear-gradient(to right, #805f46, #a37c58);
+}
