@@ -1,0 +1,181 @@
+/* /brinth_styles/game_clubs.css */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cinzel Decorative", serif;
+  background: url("../../brinth_icons/bg3.jpg") no-repeat center/cover fixed;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.quiz-frame {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  border-radius: 20px;
+  border: 3px solid #44724d;
+  box-shadow: 0 0 25px #2c5236;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+h2 {
+  font-size: 1.8em;
+  text-shadow: 0 0 8px #44724d;
+}
+
+.combo-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 35px 0;
+}
+.combo-box {
+  display: flex;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 2px solid #44724d;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px #2c5236;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.digit {
+  display: inline-block;
+  width: 20px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+
+form {
+  margin-top: 20px;
+}
+input[type="text"] {
+  width: 85px;
+  padding: 12px;
+  font-size: 1.2em;
+  text-align: center;
+  border: 2px solid #44724d;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #cdeccd;
+  outline: none;
+}
+button {
+  margin-left: 15px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: 2px solid #44724d;
+  border-radius: 10px;
+  background: transparent;
+  color: #cdeccd;
+  font-family: "Cinzel Decorative", serif;
+  transition: 0.3s;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 12px #55a06d;
+  color: #fff;
+}
+
+.quit-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 55px;
+  font-size: 0.9em;
+  border: 2px solid #44724d;
+  color: #44724d;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quit-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px #44724d;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #111;
+  border: 2px solid #44724d;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px #44724d;
+}
+.modal-content button {
+  margin: 15px;
+  padding: 10px 25px;
+  border: 2px solid #44724d;
+  color: #44724d;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modal-content button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px #44724d;
+  color: #fff;
+}
+
+.combo-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+
+.combo-left,
+.combo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.combo-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.combo-entry {
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 150px;
+}
+
+
+.combo-hint {
+  font-size: 0.85em;
+  color: #c5c5c5;
+  text-shadow: 0 0 3px #223322;
+  margin: 5px 0 0;
+  padding: 0;
+  line-height: 1.3;
+}

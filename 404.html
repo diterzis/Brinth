@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found - Brinth</title>
+    <link rel="icon" href="../brinth_icons/brinth_logo.png">
+    <link rel="stylesheet" href="../brinth_styles/brinth_footer.css">
+    <link rel="stylesheet" href="../brinth_styles/brinth_navbar.css" />
+    <link rel="stylesheet" href="../brinth_styles/brinth_footer.css"/>
+    <link rel="stylesheet" href="../brinth_styles/brinth_forgot.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: radial-gradient(ellipse at center, #1b0f08, #000);
+            color: #f5e4d0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .error-box {
+            background: rgba(20, 10, 5, 0.85);
+            padding: 70px 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px #5e3b2f;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 25px #8b5e3c);
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.6em;
+            color: #d6a78a;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #cdb9a2;
+            margin-bottom: 30px;
+        }
+
+        a.back-button {
+            text-decoration: none;
+            padding: 12px 26px;
+            background: linear-gradient(to right, #6a4425, #8b5e3c);
+            color: white;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        a.back-button:hover {
+            background: linear-gradient(to right, #9a6b4a, #c68861);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-box">
+        <img src="../brinth_icons/brinth_logo.png" alt="Brinth Logo" class="logo">
+
+        <h1>Oops... That page doesn’t exist.</h1>
+        <p>Maybe the spell was typed wrong, or the page vanished into the dark.</p>
+        <a href="/brinth/index/brinthgame.php" class="back-button">Return to Brinth</a>
+    </div>
+
+</body>
+</html>

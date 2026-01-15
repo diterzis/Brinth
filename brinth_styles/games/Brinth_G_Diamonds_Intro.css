@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: 'Cinzel Decorative', serif;
+    background: url("../../brinth_icons/bg5.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+    padding: 80px 20px;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.intro-frame {
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 15px;
+    padding: 40px;
+    border: 1.5px solid #5d3e2d;
+    box-shadow: 0 0 25px #5d3e2d;
+    width: 90%;
+    max-width: 950px;
+    text-align: center;
+    position: relative;
+}
+
+.intro-main-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px #5d3e2d;
+}
+
+.intro-buttons {
+    margin-top: 20px;
+}
+
+.intro-buttons button {
+    margin: 10px;
+    padding: 10px 30px;
+    font-size: 1.1em;
+    border: 1.5px solid #5d3e2d;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Cinzel Decorative', serif;
+    transition: 0.3s;
+}
+
+.intro-buttons button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px #5d3e2d;
+    color: #fff;
+}
+
+#watchedForm button {
+    color: #795845;
+    border-color: #795845;
+}
+
+#watchedForm button:hover {
+    box-shadow: 0 0 10px #795845;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}

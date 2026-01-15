@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: url("../../brinth_icons/bg2.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.top-username {
+  font-size: 2.5em;
+  font-family: 'CopperplateCC-Bold';
+  color: #c5a98a;
+  text-shadow: 0 0 8px #795845;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-size: 1.8em;
+  font-family: 'Cinzel Decorative', serif;
+  color: #795845;
+  text-shadow: 0 0 6px #a88a60;
+  margin-bottom: 40px;
+}
+
+.info-section {
+  margin: 40px auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding: 20px 30px;
+  border: 2px solid #795845;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #5e4431;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.info-section h3 {
+  color: #a88a60;
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.info-section p,
+.info-section label {
+  margin-bottom: 12px;
+  color: #ccc;
+  font-size: 1.05em;
+}
+
+.info-section span {
+  color: #c5a98a;
+  font-weight: bold;
+}
+
+.info-section input {
+  display: block;
+  width: 80%;
+  padding: 12px;
+  margin: 0 auto 12px auto;
+  margin-bottom: 12px;
+  border: 1px solid #614b3e;
+  border-radius: 25px;
+  background-color: #111;
+  color: #6b6b6b;
+  font-size: 1em;
+}
+
+.info-section button,
+.small-button {
+  padding: 10px 20px;
+  font-size: 0.9em;
+  border: 2px solid #795845;
+  background: transparent;
+  color: #795845;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Cinzel Decorative', serif;
+  text-shadow: 0 0 6px #3e2d20;
+  transition: all 0.3s ease;
+  
+}
+
+.info-section button:hover,
+.small-button:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  box-shadow: 0 0 12px #a88a60;
+  
+}
+
+hr {
+  width: 50%;
+  margin: 40px auto;
+  border-color: #795845;
+  opacity: 0.3;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: rgba(10, 10, 10, 0.95);
+  margin: auto;
+  padding: 30px;
+  border: 2px solid #795845;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px #5e4431;
+  color: #fff;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #111;
+  border: 1px solid #555;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 30px;
+  font-size: 0.95em;
+  background: transparent;
+  border: 2px solid #795845;
+  color: #795845;
+  cursor: pointer;
+  border-radius: 10px;
+  
+}
+
+.modal-content button:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+.back-button-container {
+  margin-top: 50px;
+}
+
+.back-button {
+  display: inline-block;
+  font-family: 'Attack of Monster', serif;
+  padding: 40px 80px;
+  font-size: 2.2em;
+  color: #795845;
+  background: transparent;
+  border: 5px solid #795845;
+  text-decoration: none;
+  clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%, 75% 100%,
+    25% 100%, 0% 50%);
+  box-shadow: 0 0 20px rgba(42, 20, 167, 0.4);
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px #3e2d20, 0 0 8px #a88a60;
+}
+
+.back-button:hover {
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 25px #fff;
+  color: #fff;
+}
+
+.info-message {
+    margin: 20px auto;
+    padding: 12px 20px;
+    width: fit-content;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #795845;
+    border-radius: 12px;
+    color: #c5a98a;
+    font-family: 'Cinzel Decorative', serif;
+    text-shadow: 0 0 6px #5e4431;
+    box-shadow: 0 0 10px #5e4431;
+  }
+  

@@ -1,0 +1,201 @@
+/* Reset & Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: url("../../brinth_icons/signupin.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  color: #f2e4da;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Vampire Wars";
+  src: url("../../brinth_styles/brinth_fonts/Vampire\ Wars.ttf")
+    format("truetype");
+}
+
+/* Game Title */
+header h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 30px 0 10px;
+  color: #e3c8b4;
+  text-shadow: 0 0 20px #5c3d2e;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  padding: 50px;
+  height: 100vh;
+}
+
+/* Register Form */
+.register-form {
+  flex: none;
+  background-color: #000000;
+  padding: 50px 30px;
+  border: 1px solid #5c3d2e;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #5c3d2e;
+  animation: border-glow 1ms infinite alternate;
+  width: 400px;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d6b8a1;
+  font-size: 35px;
+}
+
+.register-form input,
+.register-form button {
+  width: 70%;
+  margin: 0 auto 20px auto;
+  display: block;
+  padding: 15px 14px;
+  border: 1px solid #5c3d2e;
+  background-color: #2a1a14;
+  color: #f2e4da;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.register-form input::placeholder {
+  color: #bba598;
+}
+
+.register-form input:focus {
+  border-color: #a68576;
+  box-shadow: 0 0 10px #a68576;
+  outline: none;
+}
+
+.register-form button {
+  background: linear-gradient(to right, #a68576, #7c4e3b);
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.register-form button:hover {
+  box-shadow: 0 0 12px #d6b8a1;
+}
+
+/* Text Area */
+.text-section {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 60px 100px;
+  text-align: justify;
+  color: #cbb6a4;
+  font-size: 1.1em;
+}
+
+/* Animations */
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 12px #a68576aa, 0 0 24px #a6857644;
+  }
+  100% {
+    box-shadow: 0 0 12px #a68576aa, 0 0 24px #a6857644;
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 12px #a68576aa, 0 0 24px #a6857644;
+  }
+  50% {
+    box-shadow: 0 0 40px #5c3d2e;
+  }
+  100% {
+    box-shadow: 0 0 12px #a68576aa, 0 0 24px #a6857644;
+  }
+}
+
+/* Create Heading */
+.create-heading {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  font-family: "Vampire Wars", cursive;
+  font-size: 90px;
+  color: #d6a78a;
+  text-shadow: 0 0 10px #1a1a1ad8;
+  line-height: 1.1;
+  z-index: 10;
+  letter-spacing: 2px;
+}
+
+.brinth-logo-floating {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 999;
+}
+
+.brinth-logo-floating img {
+  width: 45px;
+  height: auto;
+  filter: drop-shadow(0 0 4px #d6a78a);
+  transition: transform 0.3s ease;
+}
+
+.brinth-logo-floating img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .create-heading {
+    position: absolute;
+    top: 0; /* move it to top of form container */
+    left: 50%; /* center horizontally */
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    margin-top: 50px;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .register-form {
+    margin: 0 auto;
+    width: 450px; /* small side margin */
+    max-width: 500px; /* similar to Sign In modal */
+    padding: 40px 20px;
+    box-shadow: 0 0 20px #5c3d2e;
+    
+  }
+}
+.brinth-logo-floating {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  margin-top: 30px;
+}
+
+.brinth-logo-floating img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 60px;
+}
+
+.footer-top,
+.footer-bottom {
+  padding: 10px 20px;
+}
